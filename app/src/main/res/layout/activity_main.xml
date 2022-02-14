@@ -13,23 +13,22 @@
         android:layout_height="wrap_content"
         android:background="#FF5722"
         android:orientation="horizontal"
-        android:weightSum="2"
-        >
+       >
 
         <Button
             android:id="@+id/firstButtonId"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
 
             android:text="First"
-            android:textColor="#E91E63"
+            android:textColor="#FCFCFC"
             android:textSize="22sp" />
 
         <Button
             android:id="@+id/seondButtonId"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
@@ -40,8 +39,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayoutId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.example.android_fragments.Fragments.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
